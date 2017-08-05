@@ -5,10 +5,11 @@ import 'jquery';
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import Display from './components/Display';
 
 
 ReactDOM.render(
-	<MyComponent />,
+	<Display />,
 	document.getElementById('root')
 )
 
