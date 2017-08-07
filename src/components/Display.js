@@ -26,6 +26,9 @@ class Display extends React.Component {
   }
 
   addRecipe(name, ingredients){
+    if(name == ""){
+	name = 'default'
+    }
     this.state.listRecipe.push({recipeName: name, ingredients: ingredients});
     this.setState(this.state)
   }
