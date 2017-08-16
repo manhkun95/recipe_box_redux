@@ -1,4 +1,6 @@
 import React from 'react';
+import {addRecipe, editRecipe} from '../actions';
+import {connect} from 'react-redux';
 
 class MyModal extends React.Component {
   constructor(props){
@@ -71,6 +73,11 @@ class MyModal extends React.Component {
     )
   }
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addRecipe: (id) => dispatch(removeRecipe(id)),
+    editRecipe:(id, name, ingredients) => dispatch(editRecipe(id, name, ingredients))
+  }
+}
 
-
-export default MyModal
+export default connect(null, mapDispatchToProps)(MyModal)
